@@ -48,7 +48,7 @@ guessBtn.addEventListener('click', ()=>{
 
         }
         else{
-            setMessage(`Рекли смо од 1 до 10, а ви сте унели ${guess}`, 'red')
+            setMessage(`Рекли смо од 1 до 10, а ви сте унели ${guessNum.value}`, 'red')
             clearInput();
         }
 
