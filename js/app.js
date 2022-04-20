@@ -30,11 +30,12 @@ guessBtn.addEventListener('click', ()=>{
     let guess=parseInt(guessNum.value);
     if(guess!==NaN){
         if(guess>=1&&guess<=10){
-          setMessage(`${guess} није број који смо тражили, имате ${guessesLeft-1} покушаја`, 'red');
+          setMessage(`${guess} није број који смо тражили, имате ${guessesLeft} покушаја`, 'red');
           guessesLeft-=1; 
           clearInput();
         if(guess==winningNum){
-            setMessage(`${winningNum} је број који смо тражили`, 'green');
+            setMessage(`ПОБЕДА! ${winningNum} је број који смо тражили`, 'green');
+
              gameOver();
             guessNum.style.borderColor='green';
         }
@@ -43,15 +44,12 @@ guessBtn.addEventListener('click', ()=>{
             gameOver();
             setMessage(`Изгубили сте, тражени број је био ${winningNum}`, 'red');
           }
-            
-        
 
         }
         else{
             setMessage(`Рекли смо од 1 до 10, а ви сте унели ${guess}`, 'red')
             clearInput();
         }
-
 
     }
  
