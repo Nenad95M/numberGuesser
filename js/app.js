@@ -26,7 +26,7 @@ const playAgain=document.getElementById('playAgain');
 minNum.innerText=min;
 maxNum.innerText=max;
 //callback za pogadjanje broja
-guessBtn.addEventListener('click', ()=>{
+game.addEventListener('submit', ()=>{
     let guess=parseInt(guessNum.value);
     if(guess!==NaN){
         if(guess>=1&&guess<=10){
